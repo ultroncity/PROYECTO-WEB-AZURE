@@ -7,7 +7,7 @@
 // CONFIGURACIÓN BACKEND
 // ======================================================
 const API_URL =
-  "https://proyecto-web-backend-g2fsevcfegcfbtdj.canadaeast-01.azurewebsites.net/api";
+  "https://proyecto-web-backend-g2fsevcfegcfbtdj.centralus-01.azurewebsites.net/api";
 
 let usuarioActual = null;
 
@@ -312,4 +312,5 @@ function aplicarFondo(fondo) {
 
   pagina.style.background = fondo;
 }
+
 
