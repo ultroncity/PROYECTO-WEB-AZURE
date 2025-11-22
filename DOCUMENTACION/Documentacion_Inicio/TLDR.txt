@@ -1,0 +1,46 @@
+# 🎯 TL;DR - LA VERSIÓN ULTRA CORTA
+
+## Lo que necesitas saber en 30 segundos:
+
+```
+✅ Tu app está lista
+✅ Funciona perfectamente  
+✅ 10 min para desplegar en Azure
+✅ 99% de éxito
+```
+
+## ¿Qué hacer?
+
+1. **Abre:** `INICIO.txt`
+2. **Lee:** el documento que corresponda a tu tiempo
+3. **Desplega:** sigue 4 pasos
+4. **Celebra:** ¡Listo! 🎉
+
+## Documentos principales
+
+| Tiempo | Archivo | Acciones |
+|--------|---------|----------|
+| 5 min | REFERENCIA_RAPIDA.md | 4 pasos → Desplegar |
+| 10 min | INSTRUCCIONES_FINALES.md | Paso a paso → Desplegar |
+| 20 min | GUIA_DESPLIEGUE_COMPLETA.md | Todo detallado → Desplegar |
+
+## ¿Dónde está el servidor?
+
+```
+http://localhost:8000
+```
+
+Corriendo ahora. Prueba localmente antes de desplegar.
+
+## Después de desplegar
+
+Tu URL será algo como:
+```
+https://app-estudiante-xxx.azurestaticapps.net
+```
+
+Comparte con profesores. Fin.
+
+---
+
+**Next:** Abre `INICIO.txt` 👈

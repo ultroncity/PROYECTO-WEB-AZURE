@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sistema de Usuarios - Azure</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <!-- Página de Login/Registro -->
+  <div id="paginaAuth" class="pagina-auth">
+    <div class="contenedor">
+      <h1>Sistema de Usuarios</h1>
+
+      <!-- Switch tipo píldora -->
+      <div class="switch-container">
+        <div class="switch-pill">
+          <button id="btnLogin" class="switch-btn active">INICIAR SESIÓN</button>
+          <button id="btnRegistro" class="switch-btn">HACER UNA CUENTA</button>
+          <span class="switch-slider"></span>
+        </div>
+      </div>
+
+      <!-- Paneles -->
+      <div id="panelLogin" class="panel active">
+        <h2>Iniciar sesión</h2>
+        <form id="formLogin">
+          <label>Usuario</label>
+          <input type="text" id="usuarioLogin" required>
+          <label>Contraseña</label>
+          <input type="password" id="passwordLogin" required>
+          <button type="submit">Iniciar sesión</button>
+        </form>
+      </div>
+
+      <div id="panelRegistro" class="panel">
+        <h2>Registrarse</h2>
+        <form id="formRegistro">
+          <label>Nombre completo</label>
+          <input type="text" id="nombreRegistro" required>
+          <label>Usuario</label>
+          <input type="text" id="usuarioRegistro" required>
+          <label>Contraseña</label>
+          <input type="password" id="passwordRegistro" required>
+          <label>Fondo (elige color o URL)</label>
+          <div class="fondo-row">
+            <div class="color-circle" id="colorPreview"></div>
+            <input type="color" id="colorInput" value="#1877f2">
+            <input type="text" id="fondoRegistro" placeholder="Ej: red o https://imagen.jpg">
+          </div>
+          <button type="submit">Registrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Página de Perfil de Usuario -->
+  <div id="paginaPerfil" class="pagina-perfil" style="display:none;">
+    <div id="fondoPerfil" class="fondo-perfil"></div>
+    
+    <!-- Encabezado -->
+    <div class="perfil-header">
+      <h1 id="nombrePerfil"></h1>
+      <div class="botones-header">
+        <button id="btnConfiguracion" class="btn-header btn-config">⚙️ Configuración</button>
+        <button id="btnCerrarSesion" class="btn-header btn-cerrar-sesion">🚪 Cerrar sesión</button>
+      </div>
+    </div>
+
+    <!-- Contenido Principal (Calificaciones y Horario) -->
+    <div id="contenidoPrincipal" class="contenido-principal">
+      <div class="contenedor-secciones">
+        <!-- Calificaciones -->
+        <div class="seccion">
+          <h2>📊 Calificaciones</h2>
+          <table class="tabla-calificaciones">
+            <thead>
+              <tr>
+                <th>Asignatura</th>
+                <th>Calificación</th>
+                <th>Fecha</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Programación Web</td>
+                <td class="calif-alta">9.5</td>
+                <td>15 Nov 2025</td>
+              </tr>
+              <tr>
+                <td>Base de Datos</td>
+                <td class="calif-media">8.0</td>
+                <td>14 Nov 2025</td>
+              </tr>
+              <tr>
+                <td>Diseño UI/UX</td>
+                <td class="calif-alta">9.2</td>
+                <td>13 Nov 2025</td>
+              </tr>
+              <tr>
+                <td>Seguridad Informática</td>
+                <td class="calif-media">7.8</td>
+                <td>12 Nov 2025</td>
+              </tr>
+              <tr>
+                <td>Cloud Computing</td>
+                <td class="calif-alta">8.9</td>
+                <td>11 Nov 2025</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="promedio">
+            <strong>Promedio General: 8.68</strong>
+          </div>
+        </div>
+
+        <!-- Horario -->
+        <div class="seccion">
+          <h2>📅 Horario de Clases</h2>
+          <table class="tabla-horario">
+            <thead>
+              <tr>
+                <th>Hora</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miércoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="hora">08:00 - 09:30</td>
+                <td class="clase">Programación Web</td>
+                <td class="clase">Base de Datos</td>
+                <td class="clase">Programación Web</td>
+                <td class="clase">Seguridad</td>
+                <td class="clase">Cloud Computing</td>
+              </tr>
+              <tr>
+                <td class="hora">09:45 - 11:15</td>
+                <td class="clase">Base de Datos</td>
+                <td class="clase">Diseño UI/UX</td>
+                <td class="clase">Base de Datos</td>
+                <td class="clase">Programación Web</td>
+                <td class="clase">Diseño UI/UX</td>
+              </tr>
+              <tr>
+                <td class="hora">11:30 - 13:00</td>
+                <td class="clase">Seguridad</td>
+                <td class="clase">Cloud Computing</td>
+                <td class="clase">Seguridad</td>
+                <td class="clase">Cloud Computing</td>
+                <td class="clase">Programación Web</td>
+              </tr>
+              <tr>
+                <td class="hora">14:00 - 15:30</td>
+                <td class="clase">Diseño UI/UX</td>
+                <td class="clase">Programación Web</td>
+                <td class="clase">Cloud Computing</td>
+                <td class="clase">Diseño UI/UX</td>
+                <td class="libre">Libre</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Configuración (Oculto por defecto) -->
+    <div id="contenidoConfiguracion" class="contenido-configuracion" style="display:none;">
+      <div class="perfil-card">
+        <h2>⚙️ Configuración de Perfil</h2>
+        <div class="perfil-info">
+          <p><b>Usuario:</b> <span id="usuarioPerfil"></span></p>
+          <label>Nombre</label>
+          <input type="text" id="nuevoNombre">
+          <label>Contraseña</label>
+          <input type="password" id="nuevoPass">
+          <label>Fondo (color o URL)</label>
+          <div class="fondo-row">
+            <div class="color-circle" id="colorCircle"></div>
+            <input type="color" id="colorPicker">
+            <input type="text" id="nuevoFondo" placeholder="Color o URL">
+          </div>
+        </div>
+        <div class="perfil-botones">
+          <button id="btnGuardar" class="btn btn-guardar">💾 Guardar cambios</button>
+          <button id="btnEliminar" class="btn btn-eliminar">🗑️ Eliminar cuenta</button>
+          <button id="btnVolver" class="btn btn-volver">← Volver</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
